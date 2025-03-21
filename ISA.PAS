@@ -56,7 +56,9 @@ Function PressureAtAltitude(Altitude:Real):Real;Begin
  End;
 End;
 
-{ Fonction qui d‚termine le groupe d'altitude auquel appartient une altitude donn‚e.
+{ Cette fonction permet de d‚terminer le groupe d'altitude auquel
+  appartient une altitude donn‚e.
+
   Altitude : altitude en mŠtres.
   Retourne un type AltitudeBracket correspondant … la tranche d'altitude.
 }
@@ -67,9 +69,9 @@ Function BracketForAltitude(Altitude:Real):AltitudeBracket;Begin
                      Else BracketForAltitude:=HighAltitude;
 End;
 
-{
-  Fonction qui calcule la vitesse du son … une altitude donn‚e,
-  en fonction de la temp‚rature de l'air … cette altitude.
+{ Cette fonction permet de calculer la vitesse du son … une altitude
+  donn‚e, en fonction de la temp‚rature de l'air … cette altitude.
+
   Altitude : altitude en mŠtres.
   Retourne la vitesse du son en m/s … l'altitude donn‚e.
 }
@@ -93,6 +95,7 @@ End;
 { Cette fonction permet de calculer le temps n‚cessaire pour atteindre
   une altitude cible en fonction de l'altitude de d‚part, de l'altitude
   cible et du taux de mont‚e (en m/s).
+
   InitialAltitude : altitude de d‚part en mŠtres.
   TargetAltitude : altitude cible en mŠtres.
   ClimbRate : taux de mont‚e en mŠtres par seconde.
@@ -118,8 +121,9 @@ begin
  ClimbTime:=TotalTime;
 End;
 
-{ Fonction qui calcule la distance parcourue lors de la mont‚e en fonction
-  du taux de mont‚e et du temps de mont‚e.
+{ Cette fonction permet de calculer la distance parcourue lors de la
+  mont‚e en fonction du taux de mont‚e et du temps de mont‚e.
+
   ClimbRate : taux de mont‚e en m/s.
   ClimbTime : temps de mont‚e en secondes.
   Retourne la distance parcourue en mŠtres. }
@@ -140,6 +144,7 @@ End;
 { Cette fonction permet de calculer le temps n‚cessaire pour
   redescendre d'une altitude donn‚e … une autre en fonction du taux
   de descente (en m/s).
+
   InitialAltitude : altitude de d‚part en mŠtres.
   TargetAltitude : altitude cible en mŠtres.
   DescendRate : taux de descente en mŠtres par seconde.
